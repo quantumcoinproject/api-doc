@@ -17,7 +17,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ethereum', // Usually your GitHub org/user name.
+  organizationName: 'quantumcoinproject', // Usually your GitHub org/user name.
   projectName: 'execution-apis', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
