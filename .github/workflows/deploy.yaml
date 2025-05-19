@@ -3,7 +3,7 @@ name: Deploy specification
 on:
   push:
     branches:
-      - main
+      - quantumcoin
 
 env:
   # this avoids node running out of memory while building
