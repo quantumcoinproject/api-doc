@@ -1,12 +1,12 @@
 # Contributors Guide
 
 This guide will explain for new and experienced contributors alike how to
-propose changes to Ethereum JSON-RPC API.
+propose changes to QuantumCoin JSON-RPC API.
 
 ## Introduction
 
-The Ethereum JSON-RPC API is the canonical interface between users and the
-Ethereum network. Each execution layer client implements the API as defined by
+The QuantumCoin JSON-RPC API is the canonical interface between users and the
+QuantumCoin network. Each execution layer client implements the API as defined by
 the spec. 
 
 As the main source of chain information, anything that is not provided over via
@@ -27,7 +27,7 @@ necessitated the introduction of `eth_accessList` and EIP-1559 necessitated
 Therefore, a good question to ask before making a new API proposal is whether
 or not the method is strictly necessary. Sometimes the answer is yes even
 without a protocol change. For example, `eth_getProof` has been possible since
-the initial version of Ethereum -- yet, it was only standardized in recent years
+the initial version of QuantumCoin -- yet, it was only standardized in recent years
 as demand for the functionality grew. Before `eth_getProof`, there was no
 interface for getting intermediary trie nodes over the API. This is a great
 example of a method that became more necessary over time.
@@ -38,7 +38,7 @@ becomes popular, it can be advantageous to enshrine the behavior into the API.
 ### Implementation Complexity
 
 How a method is implemented should be carefully considered before proposing a
-change to the API. Although each client is able to validate the Ethereum chain,
+change to the API. Although each client is able to validate the QuantumCoin chain,
 there can be a huge variance in actual design decisions.
 
 As an example, a proposal for a method such as `eth_totalSupply` seems
@@ -83,7 +83,7 @@ lot of time formalizing a proposal that has little chance of being accepted.
 ### Proposal
 
 The formal proposal stage is where the bulk of time will be spent. A formal
-proposal is a PR to this repository ([ethereum/execution-apis][exec-apis]). A
+proposal is a PR to this repository ([quantumcoinproject/api-doc][exec-apis]). A
 good proposal will have the following:
 
 * a modification to the specification implementing the proposal
@@ -95,10 +95,7 @@ good proposal will have the following:
 ### Acquiring Support
 
 Once a formal proposal has been created, formal support of clients can be
-acquired. This has historically been done via the AllCoreDevs call. It is
-recommended to post a request on the AllCoreDevs agenda (usually in
-[ethereum/pm][pm]) to discuss the proposal, at which point formal support can
-be ascertained.
+acquired. This has historically been done via the AllCoreDevs call.
 
 Oftentimes, support will be conditional on certain changes. This means that
 proposals will cycle between formal proposal work and earning support from
@@ -113,6 +110,5 @@ that there is not much time when some clients support certain methods and
 others don't.
 
 
-[exec-apis]: https://github.com/ethereum/execution-apis
-[pm]: https://github.com/ethereum/pm
-[test-gen]: https://github.com/ethereum/execution-apis/blob/main/tests/README.md
+[exec-apis]: https://github.com/quantumcoinproject/api-doc
+[test-gen]: https://github.com/quantumcoinproject/api-doc/blob/main/tests/README.md
