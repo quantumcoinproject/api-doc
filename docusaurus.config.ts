@@ -18,7 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'quantumcoinproject', // Usually your GitHub org/user name.
-  projectName: 'execution-apis', // Usually your repo name.
+  projectName: 'api-doc', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
@@ -61,7 +61,7 @@ const config: Config = {
     navbar: {
       title: 'Execution APIs',
       // logo: {
-      //   alt: 'My Site Logo',
+      //   alt: 'QuantumCoin',
       //   src: 'img/logo.svg',
       // },
       items: [
@@ -72,7 +72,7 @@ const config: Config = {
           label: 'API Reference',
         },
         {
-          href: 'https://github.com/quantumcoinproject/execution-apis',
+          href: 'https://github.com/quantumcoinproject/api-doc',
           label: 'GitHub',
           position: 'right',
         },
@@ -86,7 +86,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/quantumcoinproject/execution-apis',
+              href: 'https://github.com/quantumcoinproject/api-doc',
             },
           ],
         },
