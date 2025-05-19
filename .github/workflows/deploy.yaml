@@ -1,53 +1,59 @@
-name: Deploy to GitHub Pages
+name: Deploy specification
  
 on:
   push:
     branches:
       - quantumcoin
-  workflow_dispatch:
+
+env:
+  # this avoids node running out of memory while building
+  NODE_OPTIONS: --max_old_space_size=20480
 
 jobs:
-  build:
-    name: Build Docusaurus
+  deploy-spec:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v1
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm install --frozen-lockfile
-        
-      - name: Build specs and website
+          node-version: '20'
+      - run: npm ci
+      - run: npm run build
+      - name: setup git config
         run: |
-          npm run build
-          npm run build:docs
-
-      - name: Upload Build Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: Deploy assembled spec
+        run: |
+          git checkout -b assembled-spec
+          git add -f openrpc.json
+          git add -f refs-openrpc.json
+          git commit -m "assemble openrpc.json"
+          git push -fu origin assembled-spec
+  deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v1
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run generate-clients
+      - run: 'sed -i -e "s|Prefix: \"\"|Prefix: \"/execution-apis\"|g" build/docs/gatsby/gatsby-config.js'
+      - run: 'sed -i -e "s|/api|api|g" build/docs/gatsby/src/pages/index.tsx'
+      - run: npm run build:docs
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: build/docs/gatsby/public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
