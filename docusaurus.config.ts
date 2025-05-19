@@ -5,12 +5,12 @@ import type * as Preset from '@metamask/docusaurus-openrpc/dist/preset';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Ethereum Execution APIs',
-  tagline: 'A JSON-RPC specification for Ethereum execution clients',
+  title: 'QuantumCoin Execution APIs',
+  tagline: 'A JSON-RPC specification for QuantumCoin',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ethereum.github.io',
+  url: 'https://apidoc.quantumcoin.org/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/execution-apis/',
@@ -72,7 +72,7 @@ const config: Config = {
           label: 'API Reference',
         },
         {
-          href: 'https://github.com/ethereum/execution-apis',
+          href: 'https://github.com/quantumcoinproject/execution-apis',
           label: 'GitHub',
           position: 'right',
         },
@@ -86,7 +86,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/ethereum/execution-apis',
+              href: 'https://github.com/quantumcoinproject/execution-apis',
             },
           ],
         },
