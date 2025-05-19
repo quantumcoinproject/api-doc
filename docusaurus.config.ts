@@ -5,9 +5,9 @@ import type * as Preset from '@metamask/docusaurus-openrpc/dist/preset';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'QuantumCoin Execution APIs',
+  title: 'QuantumCoin JSON RPC APIs',
   tagline: 'A JSON-RPC specification for QuantumCoin',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://static.quantumscan.com/v2/assets/img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://apidoc.quantumcoin.org/',
@@ -57,13 +57,13 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    //image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Execution APIs',
-      // logo: {
-      //   alt: 'QuantumCoin',
-      //   src: 'img/logo.svg',
-      // },
+       logo: {
+         alt: 'QuantumCoin',
+         src: 'https://static.quantumscan.com/v2/assets/img/icon.png',
+       },
       items: [
         {
           type: 'docSidebar',

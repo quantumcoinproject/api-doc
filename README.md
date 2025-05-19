@@ -4,10 +4,10 @@
 
 [View the spec][playground]
 
-The Ethereum JSON-RPC is a standard collection of methods that all execution
+The QuantumCoin JSON-RPC is a standard collection of methods that all execution
 clients implement. It is the canonical interface between users and the network.
 This interface allows downstream tooling and infrastructure to treat different
-Ethereum clients as modules that can be swapped at will.
+QuantumCoin clients as modules that can be swapped at will.
 
 ### Contributing
 
@@ -84,7 +84,7 @@ information.
 
 [View the spec][graphql-schema]
 
-[EIP-1767][eip-1767] proposed a GraphQL schema for interacting with Ethereum clients. Since then Besu and Geth have implemented the interface. This repo contains a live specification to integrate changes to the protocol as well as other improvements into the GraphQL schema.
+[EIP-1767][eip-1767] proposed a GraphQL schema for interacting with QuantumCoin clients. 
 
 ### Generation
 
@@ -107,13 +107,10 @@ $ npm run graphql:validate
 This repository is licensed under [CC0](LICENSE).
 
 
-[playground]: https://ethereum.github.io/execution-apis/api-documentation/
+[playground]: https://apidoc.quantumcoin.org
 [openrpc]: https://open-rpc.org
 [validator]: https://open-rpc.github.io/schema-utils-js/functions/validateOpenRPCDocument.html
-[graphql-schema]: http://graphql-schema.ethdevops.io/?url=https://raw.githubusercontent.com/ethereum/execution-apis/main/graphql.json
 [eip-1767]: https://eips.ethereum.org/EIPS/eip-1767
 [making-changes]: docs/making-changes.md
 [json-schema]: https://json-schema.org
-[hive]: https://github.com/ethereum/hive
-[rpc-compat]: https://github.com/ethereum/hive/tree/master/simulators/ethereum/rpc-compat
 [test-gen]: tests/README.md
