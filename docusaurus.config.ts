@@ -44,7 +44,6 @@ const config: Config = {
             path: 'reference',
             sidebarLabel: 'JSON-RPC',
           },
-          sidebarPath: './sidebars.ts',
           path: './docs',
         },
         blog: false,
