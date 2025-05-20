@@ -1,5 +1,5 @@
 - name: eth_sign
-  summary: Returns an EIP-191 signature over the provided data.
+  summary: Returns a signature over the provided data.
   params:
     - name: Address
       required: true
@@ -17,7 +17,7 @@
     - name: eth_sign example
       params:
         - name: Address
-          value: '0x9b2055d370f73ec7d8a03e965129118dc8f5bf83'
+          value: '0x0000000000000000000000000000000000000000000000000000000000005000'
         - name: Message
           value: '0xdeadbeaf'
       result:
@@ -40,10 +40,10 @@
         - name: Transaction
           value:
             data: '0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675'
-            from: '0xb60e8dd61c5d32be8058bb8eb970870f07233155'
+            from: '0x0000000000000000000000000000000000000000000000000000000000005000'
             gas: '0x76c0'
             gasPrice: '0x9184e72a000'
-            to: '0xd46e8dd67c5d32be8058bb8eb970870f07244567'
+            to: '0x0000000000000000000000000000000000000000000000000000000000006000'
             value: '0x9184e72a'
       result:
         name: Encoded transaction

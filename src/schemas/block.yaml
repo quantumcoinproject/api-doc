@@ -4,7 +4,6 @@ Block:
   required:
     - hash
     - parentHash
-    - sha3Uncles
     - miner
     - stateRoot
     - transactionsRoot
@@ -19,7 +18,6 @@ Block:
     - nonce
     - size
     - transactions
-    - uncles
   additionalProperties: false
   properties:
     hash:
@@ -27,9 +25,6 @@ Block:
       $ref: '#/components/schemas/hash32'
     parentHash:
       title: Parent block hash
-      $ref: '#/components/schemas/hash32'
-    sha3Uncles:
-      title: Ommers hash
       $ref: '#/components/schemas/hash32'
     miner:
       title: Coinbase
@@ -70,21 +65,6 @@ Block:
     nonce:
       title: Nonce
       $ref: '#/components/schemas/bytes8'
-    baseFeePerGas:
-      title: Base fee per gas
-      $ref: '#/components/schemas/uint'
-    withdrawalsRoot:
-      title: Withdrawals root
-      $ref: '#/components/schemas/hash32'
-    blobGasUsed:
-      title: Blob gas used
-      $ref: '#/components/schemas/uint'
-    excessBlobGas:
-      title: Excess blob gas
-      $ref: '#/components/schemas/uint'
-    parentBeaconBlockRoot:
-      title: Parent Beacon Block Root
-      $ref: '#/components/schemas/hash32'
     size:
       title: Block size
       $ref: '#/components/schemas/uint'
@@ -98,60 +78,3 @@ Block:
           type: array
           items:
             $ref: '#/components/schemas/TransactionInfo'
-    withdrawals:
-      title: Withdrawals
-      type: array
-      items:
-        $ref: '#/components/schemas/Withdrawal'
-    uncles:
-      title: Uncles
-      type: array
-      items:
-        $ref: '#/components/schemas/hash32'
-    requestsHash:
-      title: EIP-7685 requests hash
-      $ref: '#/components/schemas/hash32'
-BlockTag:
-  title: Block tag
-  type: string
-  enum:
-    - earliest
-    - finalized
-    - safe
-    - latest
-    - pending
-  description: '`earliest`: The lowest numbered block the client has available; `finalized`: The most recent crypto-economically secure block, cannot be re-orged outside of manual intervention driven by community coordination; `safe`: The most recent block that is safe from re-orgs under honest majority and certain synchronicity assumptions; `latest`: The most recent block in the canonical chain observed by the client, this block may be re-orged out of the canonical chain even under healthy/normal conditions; `pending`: A sample next block built by the client on top of `latest` and containing the set of transactions usually taken from local mempool. Before the merge transition is finalized, any call querying for `finalized` or `safe` block MUST be responded to with `-39001: Unknown block` error'
-BlockNumberOrTag:
-  title: Block number or tag
-  oneOf:
-    - title: Block number
-      $ref: '#/components/schemas/uint'
-    - title: Block tag
-      $ref: '#/components/schemas/BlockTag'
-BlockNumberOrTagOrHash:
-  title: Block number, tag, or block hash
-  anyOf:
-    - title: Block number
-      $ref: '#/components/schemas/uint'
-    - title: Block tag
-      $ref: '#/components/schemas/BlockTag'
-    - title: Block hash
-      $ref: '#/components/schemas/hash32'
-BadBlock:
-  title: Bad block
-  type: object
-  required:
-    - block
-    - hash
-    - rlp
-  additionalProperties: false
-  properties:
-    block:
-      title: Block
-      $ref: '#/components/schemas/Block'
-    hash:
-      title: Hash
-      $ref: '#/components/schemas/hash32'
-    rlp:
-      title: RLP
-      $ref: '#/components/schemas/bytes'
