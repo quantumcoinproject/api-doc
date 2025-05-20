@@ -6,6 +6,9 @@ sidebar_position: 1
 # Introduction
 
 Welcome to the QuantumCoin JSON-RPC documentation. This site provides comprehensive information about the JSON-RPC APIs provided by QuantumCoin execution clients.
+ 
+> This documentation is work in progress. There are subtle changes from Ethereum JSON RPC APIs.
+
 
 ## What are Execution APIs?
 
