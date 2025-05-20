@@ -62,7 +62,7 @@
       {
         "kind": "OBJECT",
         "name": "Account",
-        "description": "Account is an Ethereum account at a particular block.",
+        "description": "Account is an QuantumCoin account at a particular block.",
         "fields": [
           {
             "name": "address",
@@ -168,7 +168,7 @@
       {
         "kind": "SCALAR",
         "name": "Address",
-        "description": "Address is a 20 byte Ethereum address, represented as 0x-prefixed hexadecimal.",
+        "description": "Address is a 32 byte QuantumCoin address, represented as 0x-prefixed hexadecimal.",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -188,7 +188,7 @@
       {
         "kind": "OBJECT",
         "name": "Block",
-        "description": "Block is an Ethereum block.",
+        "description": "Block is a QuantumCoin block.",
         "fields": [
           {
             "name": "number",
@@ -632,7 +632,7 @@
           },
           {
             "name": "account",
-            "description": "Account fetches an Ethereum account at the current block's state.",
+            "description": "Account fetches a QuantumCoin account at the current block's state.",
             "args": [
               {
                 "name": "address",
@@ -1156,7 +1156,7 @@
       {
         "kind": "OBJECT",
         "name": "Log",
-        "description": "Log is an Ethereum event log.",
+        "description": "Log is a QuantumCoin event log.",
         "fields": [
           {
             "name": "index",
@@ -1358,7 +1358,7 @@
           },
           {
             "name": "account",
-            "description": "Account fetches an Ethereum account for the pending state.",
+            "description": "Account fetches a QuantumCoin account for the pending state.",
             "args": [
               {
                 "name": "address",
@@ -1458,7 +1458,7 @@
         "fields": [
           {
             "name": "block",
-            "description": "Block fetches an Ethereum block by number or by hash. If neither is\nsupplied, the most recent known block is returned.",
+            "description": "Block fetches a QuantumCoin block by number or by hash. If neither is\nsupplied, the most recent known block is returned.",
             "args": [
               {
                 "name": "number",
@@ -1754,7 +1754,7 @@
       {
         "kind": "OBJECT",
         "name": "Transaction",
-        "description": "Transaction is an Ethereum transaction.",
+        "description": "Transaction is a QuantumCoin transaction.",
         "fields": [
           {
             "name": "hash",
