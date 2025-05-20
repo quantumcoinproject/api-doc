@@ -4,7 +4,7 @@ type AccessTuple {
   storageKeys: [Bytes32!]!
 }
 
-"""Account is an Ethereum account at a particular block."""
+"""Account is a QuantumCoin account at a particular block."""
 type Account {
   """Address is the address owning the account."""
   address: Address!
@@ -44,7 +44,7 @@ Strings may be either decimal or 0x-prefixed hexadecimal. Output values are all
 """
 scalar BigInt
 
-"""Block is an Ethereum block."""
+"""Block is a QuantumCoin block."""
 type Block {
   """
   Number is the number of this block, starting at 0 for the genesis block.
@@ -164,7 +164,7 @@ type Block {
   """Logs returns a filtered set of logs from this block."""
   logs(filter: BlockFilterCriteria!): [Log!]!
 
-  """Account fetches an Ethereum account at the current block's state."""
+  """Account fetches a QuantumCoin account at the current block's state."""
   account(address: Address!): Account!
 
   """Call executes a local call operation at the current block's state."""
@@ -321,7 +321,7 @@ input FilterCriteria {
   topics: [[Bytes32!]!]
 }
 
-"""Log is an Ethereum event log."""
+"""Log is a QuantumCoin event log."""
 type Log {
   """Index is the index of this log in the block."""
   index: Long!
@@ -362,7 +362,7 @@ type Pending {
   """Transactions is a list of transactions in the current pending state."""
   transactions: [Transaction!]
 
-  """Account fetches an Ethereum account for the pending state."""
+  """Account fetches a QuantumCoin account for the pending state."""
   account(address: Address!): Account!
 
   """Call executes a local call operation for the pending state."""
@@ -377,7 +377,7 @@ type Pending {
 
 type Query {
   """
-  Block fetches an Ethereum block by number or by hash. If neither is
+  Block fetches a QuantumCoin block by number or by hash. If neither is
   supplied, the most recent known block is returned.
   """
   block(number: Long, hash: Bytes32): Block
@@ -432,7 +432,7 @@ type SyncState {
   highestBlock: Long!
 }
 
-"""Transaction is an Ethereum transaction."""
+"""Transaction is a QuantumCoin transaction."""
 type Transaction {
   """Hash is the hash of this transaction."""
   hash: Bytes32!

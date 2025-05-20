@@ -1,7 +1,7 @@
 {
   "name": "execution-apis",
   "version": "0.0.0",
-  "description": "Collection of JSON-RPC APIs provided by Ethereum 1.0 clients",
+  "description": "Collection of JSON-RPC APIs provided by QuantumCoin 1.0 clients",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:spec",

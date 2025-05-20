@@ -42,18 +42,6 @@ methodFiles.forEach(file => {
   ];
 });
 
-methodsBase = "src/engine/openrpc/methods/";
-methodFiles = fs.readdirSync(methodsBase);
-methodFiles.forEach(file => {
-  console.log(file);
-  let raw = fs.readFileSync(methodsBase + file);
-  let parsed = yaml.load(raw);
-  methods = [
-    ...methods,
-    ...parsed,
-  ];
-});
-
 let schemas = {};
 let schemasBase = "src/schemas/"
 let schemaFiles = fs.readdirSync(schemasBase);
@@ -67,23 +55,11 @@ schemaFiles.forEach(file => {
   };
 });
 
-schemasBase = "src/engine/openrpc/schemas/"
-schemaFiles = fs.readdirSync(schemasBase);
-schemaFiles.forEach(file => {
-  console.log(file);
-  let raw = fs.readFileSync(schemasBase + file);
-  let parsed = yaml.load(raw);
-  schemas = {
-    ...schemas,
-    ...parsed,
-  };
-});
-
 const doc = {
   openrpc: "1.2.4",
   info: {
-    title: "Ethereum JSON-RPC Specification",
-    description: "A specification of the standard interface for Ethereum clients.",
+    title: "QuantumCoin JSON-RPC Specification",
+    description: "A specification of the standard interface for QuantumCoin clients.",
     license: {
       name: "CC0-1.0",
       url: "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
