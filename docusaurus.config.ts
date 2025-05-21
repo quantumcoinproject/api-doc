@@ -18,7 +18,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'quantumcoinproject', // Usually your GitHub org/user name.
   projectName: 'api-doc', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'main',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
