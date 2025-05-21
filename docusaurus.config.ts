@@ -1,6 +1,5 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
-import type * as Preset from '@metamask/docusaurus-openrpc/dist/preset';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -33,26 +32,7 @@ const config: Config = {
   },
 
   presets: [
-    [
-      '@metamask/docusaurus-openrpc/dist/preset',
-      /** @type {import('@metamask/docusaurus-openrpc/dist/preset').Options} */
-      {
-        docs: {
-          routeBasePath: '/',
-          openrpc: {
-            openrpcDocument: './refs-openrpc.json',
-            path: 'reference',
-            sidebarLabel: 'JSON-RPC',
-          },
-          sidebarPath: './sidebars.ts',
-          path: './docs',
-        },
-        blog: false,
-        theme: {
-          customCss: './css/custom.css',
-        },
-      } satisfies Preset.Options,
-    ],
+
   ],
 
   themeConfig: {
