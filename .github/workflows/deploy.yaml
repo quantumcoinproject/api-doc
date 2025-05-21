@@ -1,9 +1,6 @@
 name: Deploy to GitHub Pages 
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -26,6 +23,8 @@ jobs:
         run: |
           npm run build
           npm run build:docs
+          cd build/docs
+          gatsby build --prefix-paths && gh-pages -d public
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3

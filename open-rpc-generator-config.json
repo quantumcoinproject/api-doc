@@ -1,10 +1,10 @@
 {
     "openrpcDocument": "openrpc.json",
-    "outDir": "build",
+    "outDir": "./build",
     "components": [
         {
             "type": "docs",
-            "name": "execution-apis",
+            "name": "api-doc",
             "language": "gatsby"
         }
     ]
