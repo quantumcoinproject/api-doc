@@ -30,10 +30,10 @@ jobs:
           pwd
           npm install
           npm install -g gatsby-cli
-          sed "s,https://raw.githubusercontent.com/open-rpc/design/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png,https://downloads.quantumcoin.org/quantum-coin-icon.png,g" src/pages/index.tsx
-          sed "s,https://raw.githubusercontent.com/open-rpc/design/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png,https://downloads.quantumcoin.org/quantum-coin-icon.png,g" gatsby-config.js
-          sed "s,siteUrl: 'https://open-rpc.org',siteUrl: 'https://quantumcoin.org',g" gatsby-config.js
-          sed "s,src/images/gatsby-icon.png,src/images/favicon.ico,g" gatsby-config.js
+          sed -i "s,https://raw.githubusercontent.com/open-rpc/design/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png,https://downloads.quantumcoin.org/quantum-coin-icon.png,g" src/pages/index.tsx
+          sed -i "s,https://raw.githubusercontent.com/open-rpc/design/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png,https://downloads.quantumcoin.org/quantum-coin-icon.png,g" gatsby-config.js
+          sed -i "s,siteUrl: 'https://open-rpc.org',siteUrl: 'https://quantumcoin.org',g" gatsby-config.js
+          sed -i "s,src/images/gatsby-icon.png,src/images/favicon.ico,g" gatsby-config.js
           gatsby build       
           ls
           ls public/
