@@ -22,14 +22,13 @@ jobs:
       - name: Build specs and website
         run: |
           npm run build
-          npm run build:docs
           cd build/docs
           gatsby build --prefix-paths && gh-pages -d public
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: build/docs
 
   deploy:
     name: Deploy to GitHub Pages
