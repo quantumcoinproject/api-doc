@@ -25,8 +25,11 @@ jobs:
           npm install -g @open-rpc/generator
           open-rpc-generator generate -c open-rpc-generator-config.json          
           ls build/docs/gatsby
-          cd build/docs/gatsby && npm install -g gatsby-cli
-          cd build/docs/gatsby && gatsby build          
+          cd build/docs/gatsby
+          pwd
+          npm install
+          npm install -g gatsby-cli
+          npm gatsby build          
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
