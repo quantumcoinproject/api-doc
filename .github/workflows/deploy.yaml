@@ -1,14 +1,11 @@
 name: Deploy to GitHub Pages 
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
   build:
-    name: Build Docusaurus
+    name: Build Documentation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,12 +22,23 @@ jobs:
       - name: Build specs and website
         run: |
           npm run build
-          npm run build:docs
+          npm install -g @open-rpc/generator
+          open-rpc-generator generate -c open-rpc-generator-config.json          
+          ls build/docs/gatsby
+          cd build/docs/gatsby
+          pwd
+          npm install
+          npm install -g gatsby-cli
+          gatsby build       
+          ls
+          ls public/
+          ls src/pages
+          ls src/
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: build/docs/gatsby/public
 
   deploy:
     name: Deploy to GitHub Pages
