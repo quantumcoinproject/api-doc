@@ -1,0 +1,11 @@
+{
+    "openrpcDocument": "openrpc.json",
+    "outDir": "./build",
+    "components": [
+        {
+            "type": "docs",
+            "name": "QuantumCoin",
+            "language": "gatsby"
+        }
+    ]
+}
