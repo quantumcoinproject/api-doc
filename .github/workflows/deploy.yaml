@@ -22,12 +22,6 @@ jobs:
       - name: Build specs and website
         run: |
           npm run build
-          npm install -g @open-rpc/generator  
-          open-rpc-generator init
-          open-rpc-generator generate -c open-rpc-generator-config.json
-          ls build/docs          
-          cd build/docs
-          gatsby build --prefix-paths && gh-pages -d public
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
