@@ -29,12 +29,16 @@ jobs:
           pwd
           npm install
           npm install -g gatsby-cli
-          gatsby build          
+          gatsby build       
+          ls
+          ls public/
+          ls src/pages
+          ls src/
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build/docs
+          path: build/docs/gatsby/public
 
   deploy:
     name: Deploy to GitHub Pages
