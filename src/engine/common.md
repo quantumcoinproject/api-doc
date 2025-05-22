@@ -136,7 +136,7 @@ Values of a field of `QUANTITY` type **MUST** be encoded as a hexadecimal string
 
 *Note:* Byte order of encoded value having `QUANTITY` type is big-endian.
 
-[json-rpc-spec]: https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/ethereum/execution-apis/assembled-spec/openrpc.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:examplesDropdown]=false
+[json-rpc-spec]: https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/quantumcoinproject/api-doc/assembled-spec/openrpc.json&uiSchema[appBar][ui:splitView]=false&uiSchema[appBar][ui:input]=false&uiSchema[appBar][ui:examplesDropdown]=false
 
 ## Capabilities
 
