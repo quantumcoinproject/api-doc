@@ -25,6 +25,7 @@ jobs:
         run: |
           npm run build
           open-rpc-generator generate -c open-rpc-generator-config.json
+          ls build/docs
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v4
