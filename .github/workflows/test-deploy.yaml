@@ -38,6 +38,7 @@ jobs:
           sed -i "s,https://raw.githubusercontent.com/open-rpc/design/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png,https://downloads.quantumcoin.org/quantum-coin-icon.png,g" gatsby-config.js
           sed -i "s,siteUrl: 'https://open-rpc.org',siteUrl: 'https://quantumcoin.org',g" gatsby-config.js
           sed -i "s,src/images/gatsby-icon.png,src/images/favicon.ico,g" gatsby-config.js
+          sed -i "s,name: 'home',name: 'Home',g" gatsby-config.js
           gatsby build       
           ls
           ls public/
