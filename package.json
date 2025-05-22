@@ -11,15 +11,6 @@
     "generate-clients": "mkdir -p build && open-rpc-generator generate -c open-rpc-generator-config.json",
     "graphql:schema": "node scripts/graphql.mjs",
     "graphql:validate": "node scripts/graphql-validate.mjs",
-    "docusaurus": "docusaurus",
-    "start:docs": "docusaurus start",
-    "build:docs": "docusaurus build",
-    "swizzle:docs": "docusaurus swizzle",
-    "deploy:docs": "docusaurus deploy",
-    "clear:docs": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"
   },
   "repository": {
@@ -33,9 +24,6 @@
   },
   "homepage": "https://github.com/ethereum/execution-apis#readme",
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.7.0",
-    "@docusaurus/tsconfig": "3.7.0",
-    "@docusaurus/types": "3.7.0",
     "@graphql-inspector/core": "~3.3.0",
     "@open-rpc/schema-utils-js": "1.15.0",
     "gh-pages": "^6.3.0",
