@@ -23,10 +23,10 @@ jobs:
         run: |
           npm run build
           npm install -g @open-rpc/generator
-          open-rpc-generator generate -c open-rpc-generator-config.json
-          cd build/docs/gatsby
-          npm install -g gatsby-cli
-          gatsby build          
+          open-rpc-generator generate -c open-rpc-generator-config.json          
+          ls build/docs/gatsby
+          cd build/docs/gatsby && npm install -g gatsby-cli
+          cd build/docs/gatsby && gatsby build          
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
