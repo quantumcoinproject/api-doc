@@ -8,7 +8,7 @@
     "build:spec": "node scripts/build.mjs",
     "lint": "npm run build:spec && node scripts/validate.mjs && node scripts/graphql-validate.mjs",
     "clean": "rm -rf build && mkdir -p build",
-    "generate-clients": "mkdir -p build && open-rpc-generator generate -c open-rpc-generator-config.json",
+    "generate-clients": "mkdir -p build && open-rpc-generator generate -c open-rpc-generator-config-doc.json",
     "graphql:schema": "node scripts/graphql.mjs",
     "graphql:validate": "node scripts/graphql-validate.mjs",
     "typecheck": "tsc"

@@ -1,10 +1,9 @@
 DefaultFeeTxUnsigned:
   type: object
-  title: EIP-7702 transaction
+  title: Transaction
   required:
     - type
     - nonce
-    - to
     - gas
     - value
     - input
@@ -42,6 +41,21 @@ DefaultFeeTxUnsigned:
       title: chainId
       description: Chain ID that this transaction is valid on
       $ref: '#/components/schemas/uint'
+    blockHash:
+      title: block hash
+      $ref: '#/components/schemas/hash32'
+    blockNumber:
+      title: block number
+      $ref: '#/components/schemas/uint'
+    from:
+      title: from address
+      $ref: '#/components/schemas/address'
+    hash:
+      title: transaction hash
+      $ref: '#/components/schemas/hash32'
+    transactionIndex:
+      title: transaction index
+      $ref: '#/components/schemas/uint'
 AccessListEntry:
   title: Access list entry
   type: object
@@ -61,35 +75,34 @@ AccessList:
   type: array
   items:
     $ref: '#/components/schemas/AccessListEntry'
-Transaction1559Unsigned:
+TransactionUnsigned:
+  oneOf:
+    - $ref: '#/components/schemas/DefaultFeeTxUnsigned'
+DefaultFeeTxSigned:
+  title: Signed DefaultFeeTx
   type: object
-  title: EIP-1559 transaction.
   required:
     - type
     - nonce
     - gas
     - value
     - input
-    - maxFeePerGas
-    - maxPriorityFeePerGas
-    - gasPrice
-    - chainId
     - accessList
+    - chainId
+    - v
+    - r
+    - s
   properties:
     type:
       title: type
       type: string
-      pattern: ^0x2$
+      pattern: ^0x4$
     nonce:
       title: nonce
       $ref: '#/components/schemas/uint'
     to:
       title: to address
-      oneOf:
-        - title: Contract Creation (null)
-          type: 'null'
-        - title: Address
-          $ref: '#/components/schemas/address'
+      $ref: '#/components/schemas/address'
     gas:
       title: gas limit
       $ref: '#/components/schemas/uint'
@@ -99,49 +112,42 @@ Transaction1559Unsigned:
     input:
       title: input data
       $ref: '#/components/schemas/bytes'
-    maxPriorityFeePerGas:
-      title: max priority fee per gas
-      description: Maximum fee per gas the sender is willing to pay to miners in wei
-      $ref: '#/components/schemas/uint'
-    maxFeePerGas:
-      title: max fee per gas
-      description: The maximum total fee per gas the sender is willing to pay (includes the network / base fee and miner / priority fee) in wei
-      $ref: '#/components/schemas/uint'
     gasPrice:
       title: gas price
       description: The effective gas price paid by the sender in wei. For transactions not yet included in a block, this value should be set equal to the max fee per gas. This field is DEPRECATED, please transition to using effectiveGasPrice in the receipt object going forward.
       $ref: '#/components/schemas/uint'
     accessList:
       title: accessList
-      description: EIP-2930 access list
+      description: EIP-2930 access lists
       $ref: '#/components/schemas/AccessList'
     chainId:
       title: chainId
-      description: Chain ID that this transaction is valid on.
+      description: Chain ID that this transaction is valid on
       $ref: '#/components/schemas/uint'
-TransactionUnsigned:
-  oneOf:
-    - $ref: '#/components/schemas/DefaultFeeTxUnsigned'
-DefaultFeeTxSigned:
-  title: Signed DefaultFeeTx
-  type: object
-  allOf:
-    - $ref: '#/components/schemas/DefaultFeeTxUnsigned'
-    - title: transaction signature properties.
-      required:
-        - v
-        - r
-        - s
-      properties:
-        v:
-          title: v
-          $ref: '#/components/schemas/byte'
-        r:
-          title: r
-          $ref: '#/components/schemas/uint'
-        s:
-          title: s
-          $ref: '#/components/schemas/uint'
+    blockHash:
+      title: block hash
+      $ref: '#/components/schemas/hash32'
+    blockNumber:
+      title: block number
+      $ref: '#/components/schemas/uint'
+    from:
+      title: from address
+      $ref: '#/components/schemas/address'
+    hash:
+      title: transaction hash
+      $ref: '#/components/schemas/hash32'
+    transactionIndex:
+      title: transaction index
+      $ref: '#/components/schemas/uint'
+    v:
+      title: v
+      $ref: '#/components/schemas/byte'
+    r:
+      title: r
+      $ref: '#/components/schemas/string'
+    s:
+      title: s
+      $ref: '#/components/schemas/string'
 TransactionSigned:
   oneOf:
     - $ref: '#/components/schemas/DefaultFeeTxSigned'
@@ -149,30 +155,6 @@ TransactionInfo:
   type: object
   title: Transaction information
   allOf:
-    - title: Contextual information
-      required:
-        - blockHash
-        - blockNumber
-        - from
-        - hash
-        - transactionIndex
-      unevaluatedProperties: false
-      properties:
-        blockHash:
-          title: block hash
-          $ref: '#/components/schemas/hash32'
-        blockNumber:
-          title: block number
-          $ref: '#/components/schemas/uint'
-        from:
-          title: from address
-          $ref: '#/components/schemas/address'
-        hash:
-          title: transaction hash
-          $ref: '#/components/schemas/hash32'
-        transactionIndex:
-          title: transaction index
-          $ref: '#/components/schemas/uint'
     - $ref: '#/components/schemas/TransactionSigned'
 GenericTransaction:
   type: object
