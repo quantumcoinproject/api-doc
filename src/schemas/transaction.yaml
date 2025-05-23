@@ -1,3 +1,22 @@
+AccessListEntry:
+  title: Access list entry
+  type: object
+  additionalProperties: false
+  required:
+    - address
+    - storageKeys
+  properties:
+    address:
+      $ref: '#/components/schemas/address'
+    storageKeys:
+      type: array
+      items:
+        $ref: '#/components/schemas/hash32'
+AccessList:
+  title: Access list
+  type: array
+  items:
+    $ref: '#/components/schemas/AccessListEntry'
 DefaultFeeTxUnsigned:
   type: object
   title: Transaction
@@ -41,25 +60,6 @@ DefaultFeeTxUnsigned:
       title: chainId
       description: Chain ID that this transaction is valid on
       $ref: '#/components/schemas/uint'
-AccessListEntry:
-  title: Access list entry
-  type: object
-  additionalProperties: false
-  required:
-    - address
-    - storageKeys
-  properties:
-    address:
-      $ref: '#/components/schemas/address'
-    storageKeys:
-      type: array
-      items:
-        $ref: '#/components/schemas/hash32'
-AccessList:
-  title: Access list
-  type: array
-  items:
-    $ref: '#/components/schemas/AccessListEntry'
 TransactionUnsigned:
   oneOf:
     - $ref: '#/components/schemas/DefaultFeeTxUnsigned'
