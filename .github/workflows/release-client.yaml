@@ -1,0 +1,30 @@
+name: Release Client to NPM
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --frozen-lockfile
+
+      - name: Build specs
+        run: |
+          npm run build
+
+      - name: Build client
+        run: |
+          npm install -g @open-rpc/generator
+          open-rpc-generator generate -c open-rpc-generator-config-client.json           
+
