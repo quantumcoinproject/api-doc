@@ -18,12 +18,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install --frozen-lockfile
-        
-      - name: Build specs and website
+
+      - name: Build specs
         run: |
           npm run build
+
+      - name: Build documentation
+        run: |
           npm install -g @open-rpc/generator
-          open-rpc-generator generate -c open-rpc-generator-config.json    
+          open-rpc-generator generate -c open-rpc-generator-config-doc.json    
           cp img/*.* build/docs/gatsby/src/images/
           ls build/docs/gatsby
           cd build/docs/gatsby
@@ -40,6 +43,10 @@ jobs:
           ls public/
           ls src/pages
           ls src/
+
+      - name: Build client
+        run: |
+          open-rpc-generator generate -c open-rpc-generator-config-client.json           
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3

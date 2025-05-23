@@ -149,14 +149,6 @@
 												"items": {
 													"type": "object",
 													"title": "Transaction information",
-													"required": [
-														"blockHash",
-														"blockNumber",
-														"from",
-														"hash",
-														"transactionIndex"
-													],
-													"unevaluatedProperties": false,
 													"oneOf": [
 														{
 															"title": "Signed DefaultFeeTx",
@@ -169,7 +161,6 @@
 																"nonce",
 																"r",
 																"s",
-																"to",
 																"type",
 																"v",
 																"value"
@@ -264,31 +255,34 @@
 															}
 														}
 													],
+													"required": [
+														"blockHash",
+														"blockNumber",
+														"from",
+														"hash",
+														"transactionIndex"
+													],
+													"unevaluatedProperties": false,
 													"properties": {
 														"blockHash": {
 															"title": "block hash",
-															"type": "string",
-															"pattern": "^0x[0-9a-f]{64}$"
+															"$ref": "#/components/schemas/hash32"
 														},
 														"blockNumber": {
 															"title": "block number",
-															"type": "string",
-															"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+															"$ref": "#/components/schemas/uint"
 														},
 														"from": {
 															"title": "from address",
-															"type": "string",
-															"pattern": "^0x[0-9a-fA-F]{64}$"
+															"$ref": "#/components/schemas/address"
 														},
 														"hash": {
 															"title": "transaction hash",
-															"type": "string",
-															"pattern": "^0x[0-9a-f]{64}$"
+															"$ref": "#/components/schemas/hash32"
 														},
 														"transactionIndex": {
 															"title": "transaction index",
-															"type": "string",
-															"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+															"$ref": "#/components/schemas/uint"
 														}
 													}
 												}
@@ -1396,14 +1390,6 @@
 											"items": {
 												"type": "object",
 												"title": "Transaction information",
-												"required": [
-													"blockHash",
-													"blockNumber",
-													"from",
-													"hash",
-													"transactionIndex"
-												],
-												"unevaluatedProperties": false,
 												"oneOf": [
 													{
 														"title": "Signed DefaultFeeTx",
@@ -1416,7 +1402,6 @@
 															"nonce",
 															"r",
 															"s",
-															"to",
 															"type",
 															"v",
 															"value"
@@ -1511,31 +1496,34 @@
 														}
 													}
 												],
+												"required": [
+													"blockHash",
+													"blockNumber",
+													"from",
+													"hash",
+													"transactionIndex"
+												],
+												"unevaluatedProperties": false,
 												"properties": {
 													"blockHash": {
 														"title": "block hash",
-														"type": "string",
-														"pattern": "^0x[0-9a-f]{64}$"
+														"$ref": "#/components/schemas/hash32"
 													},
 													"blockNumber": {
 														"title": "block number",
-														"type": "string",
-														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+														"$ref": "#/components/schemas/uint"
 													},
 													"from": {
 														"title": "from address",
-														"type": "string",
-														"pattern": "^0x[0-9a-fA-F]{64}$"
+														"$ref": "#/components/schemas/address"
 													},
 													"hash": {
 														"title": "transaction hash",
-														"type": "string",
-														"pattern": "^0x[0-9a-f]{64}$"
+														"$ref": "#/components/schemas/hash32"
 													},
 													"transactionIndex": {
 														"title": "transaction index",
-														"type": "string",
-														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+														"$ref": "#/components/schemas/uint"
 													}
 												}
 											}
@@ -1753,14 +1741,6 @@
 											"items": {
 												"type": "object",
 												"title": "Transaction information",
-												"required": [
-													"blockHash",
-													"blockNumber",
-													"from",
-													"hash",
-													"transactionIndex"
-												],
-												"unevaluatedProperties": false,
 												"oneOf": [
 													{
 														"title": "Signed DefaultFeeTx",
@@ -1773,7 +1753,6 @@
 															"nonce",
 															"r",
 															"s",
-															"to",
 															"type",
 															"v",
 															"value"
@@ -1868,31 +1847,34 @@
 														}
 													}
 												],
+												"required": [
+													"blockHash",
+													"blockNumber",
+													"from",
+													"hash",
+													"transactionIndex"
+												],
+												"unevaluatedProperties": false,
 												"properties": {
 													"blockHash": {
 														"title": "block hash",
-														"type": "string",
-														"pattern": "^0x[0-9a-f]{64}$"
+														"$ref": "#/components/schemas/hash32"
 													},
 													"blockNumber": {
 														"title": "block number",
-														"type": "string",
-														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+														"$ref": "#/components/schemas/uint"
 													},
 													"from": {
 														"title": "from address",
-														"type": "string",
-														"pattern": "^0x[0-9a-fA-F]{64}$"
+														"$ref": "#/components/schemas/address"
 													},
 													"hash": {
 														"title": "transaction hash",
-														"type": "string",
-														"pattern": "^0x[0-9a-f]{64}$"
+														"$ref": "#/components/schemas/hash32"
 													},
 													"transactionIndex": {
 														"title": "transaction index",
-														"type": "string",
-														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+														"$ref": "#/components/schemas/uint"
 													}
 												}
 											}
@@ -2905,14 +2887,6 @@
 						{
 							"type": "object",
 							"title": "Transaction information",
-							"required": [
-								"blockHash",
-								"blockNumber",
-								"from",
-								"hash",
-								"transactionIndex"
-							],
-							"unevaluatedProperties": false,
 							"oneOf": [
 								{
 									"title": "Signed DefaultFeeTx",
@@ -2925,7 +2899,6 @@
 										"nonce",
 										"r",
 										"s",
-										"to",
 										"type",
 										"v",
 										"value"
@@ -3020,31 +2993,34 @@
 									}
 								}
 							],
+							"required": [
+								"blockHash",
+								"blockNumber",
+								"from",
+								"hash",
+								"transactionIndex"
+							],
+							"unevaluatedProperties": false,
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
-									"type": "string",
-									"pattern": "^0x[0-9a-f]{64}$"
+									"$ref": "#/components/schemas/hash32"
 								},
 								"blockNumber": {
 									"title": "block number",
-									"type": "string",
-									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+									"$ref": "#/components/schemas/uint"
 								},
 								"from": {
 									"title": "from address",
-									"type": "string",
-									"pattern": "^0x[0-9a-fA-F]{64}$"
+									"$ref": "#/components/schemas/address"
 								},
 								"hash": {
 									"title": "transaction hash",
-									"type": "string",
-									"pattern": "^0x[0-9a-f]{64}$"
+									"$ref": "#/components/schemas/hash32"
 								},
 								"transactionIndex": {
 									"title": "transaction index",
-									"type": "string",
-									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+									"$ref": "#/components/schemas/uint"
 								}
 							}
 						}
@@ -3135,14 +3111,6 @@
 						{
 							"type": "object",
 							"title": "Transaction information",
-							"required": [
-								"blockHash",
-								"blockNumber",
-								"from",
-								"hash",
-								"transactionIndex"
-							],
-							"unevaluatedProperties": false,
 							"oneOf": [
 								{
 									"title": "Signed DefaultFeeTx",
@@ -3155,7 +3123,6 @@
 										"nonce",
 										"r",
 										"s",
-										"to",
 										"type",
 										"v",
 										"value"
@@ -3250,31 +3217,34 @@
 									}
 								}
 							],
+							"required": [
+								"blockHash",
+								"blockNumber",
+								"from",
+								"hash",
+								"transactionIndex"
+							],
+							"unevaluatedProperties": false,
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
-									"type": "string",
-									"pattern": "^0x[0-9a-f]{64}$"
+									"$ref": "#/components/schemas/hash32"
 								},
 								"blockNumber": {
 									"title": "block number",
-									"type": "string",
-									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+									"$ref": "#/components/schemas/uint"
 								},
 								"from": {
 									"title": "from address",
-									"type": "string",
-									"pattern": "^0x[0-9a-fA-F]{64}$"
+									"$ref": "#/components/schemas/address"
 								},
 								"hash": {
 									"title": "transaction hash",
-									"type": "string",
-									"pattern": "^0x[0-9a-f]{64}$"
+									"$ref": "#/components/schemas/hash32"
 								},
 								"transactionIndex": {
 									"title": "transaction index",
-									"type": "string",
-									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+									"$ref": "#/components/schemas/uint"
 								}
 							}
 						}
@@ -3342,14 +3312,6 @@
 						{
 							"type": "object",
 							"title": "Transaction information",
-							"required": [
-								"blockHash",
-								"blockNumber",
-								"from",
-								"hash",
-								"transactionIndex"
-							],
-							"unevaluatedProperties": false,
 							"oneOf": [
 								{
 									"title": "Signed DefaultFeeTx",
@@ -3362,7 +3324,6 @@
 										"nonce",
 										"r",
 										"s",
-										"to",
 										"type",
 										"v",
 										"value"
@@ -3457,31 +3418,34 @@
 									}
 								}
 							],
+							"required": [
+								"blockHash",
+								"blockNumber",
+								"from",
+								"hash",
+								"transactionIndex"
+							],
+							"unevaluatedProperties": false,
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
-									"type": "string",
-									"pattern": "^0x[0-9a-f]{64}$"
+									"$ref": "#/components/schemas/hash32"
 								},
 								"blockNumber": {
 									"title": "block number",
-									"type": "string",
-									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+									"$ref": "#/components/schemas/uint"
 								},
 								"from": {
 									"title": "from address",
-									"type": "string",
-									"pattern": "^0x[0-9a-fA-F]{64}$"
+									"$ref": "#/components/schemas/address"
 								},
 								"hash": {
 									"title": "transaction hash",
-									"type": "string",
-									"pattern": "^0x[0-9a-f]{64}$"
+									"$ref": "#/components/schemas/hash32"
 								},
 								"transactionIndex": {
 									"title": "transaction index",
-									"type": "string",
-									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
+									"$ref": "#/components/schemas/uint"
 								}
 							}
 						}
