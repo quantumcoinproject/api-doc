@@ -1,3 +1,22 @@
+AccessListEntry:
+  title: Access list entry
+  type: object
+  additionalProperties: false
+  required:
+    - address
+    - storageKeys
+  properties:
+    address:
+      $ref: '#/components/schemas/address'
+    storageKeys:
+      type: array
+      items:
+        $ref: '#/components/schemas/hash32'
+AccessList:
+  title: Access list
+  type: array
+  items:
+    $ref: '#/components/schemas/AccessListEntry'
 DefaultFeeTxUnsigned:
   type: object
   title: Transaction
@@ -41,25 +60,6 @@ DefaultFeeTxUnsigned:
       title: chainId
       description: Chain ID that this transaction is valid on
       $ref: '#/components/schemas/uint'
-AccessListEntry:
-  title: Access list entry
-  type: object
-  additionalProperties: false
-  required:
-    - address
-    - storageKeys
-  properties:
-    address:
-      $ref: '#/components/schemas/address'
-    storageKeys:
-      type: array
-      items:
-        $ref: '#/components/schemas/hash32'
-AccessList:
-  title: Access list
-  type: array
-  items:
-    $ref: '#/components/schemas/AccessListEntry'
 TransactionUnsigned:
   oneOf:
     - $ref: '#/components/schemas/DefaultFeeTxUnsigned'
@@ -90,36 +90,58 @@ TransactionSigned:
   oneOf:
     - $ref: '#/components/schemas/DefaultFeeTxSigned'
 CommonTransactionInfo:
-  - title: Contextual information
-    required:
-      - blockHash
-      - blockNumber
-      - from
-      - hash
-      - transactionIndex
-    unevaluatedProperties: false
-    properties:
-      blockHash:
-        title: block hash
-        $ref: '#/components/schemas/hash32'
-      blockNumber:
-        title: block number
-        $ref: '#/components/schemas/uint'
-      from:
-        title: from address
-        $ref: '#/components/schemas/address'
-      hash:
-        title: transaction hash
-        $ref: '#/components/schemas/hash32'
-      transactionIndex:
-        title: transaction index
-        $ref: '#/components/schemas/uint'
+  title: Contextual transaction information
+  type: object
+  required:
+    - blockHash
+    - blockNumber
+    - from
+    - hash
+    - transactionIndex
+  properties:
+    blockHash:
+      title: block hash
+      $ref: '#/components/schemas/hash32'
+    blockNumber:
+      title: block number
+      $ref: '#/components/schemas/uint'
+    from:
+      title: from address
+      $ref: '#/components/schemas/address'
+    hash:
+      title: transaction hash
+      $ref: '#/components/schemas/hash32'
+    transactionIndex:
+      title: transaction index
+      $ref: '#/components/schemas/uint'
 TransactionInfo:
   type: object
   title: Transaction information
   allOf:
+    - title: Contextual information
+      required:
+        - blockHash
+        - blockNumber
+        - from
+        - hash
+        - transactionIndex
+      properties:
+        blockHash:
+          title: block hash
+          $ref: '#/components/schemas/hash32'
+        blockNumber:
+          title: block number
+          $ref: '#/components/schemas/uint'
+        from:
+          title: from address
+          $ref: '#/components/schemas/address'
+        hash:
+          title: transaction hash
+          $ref: '#/components/schemas/hash32'
+        transactionIndex:
+          title: transaction index
+          $ref: '#/components/schemas/uint'
     - $ref: '#/components/schemas/TransactionSigned'
-    - $ref: '#/components/schemas/CommonTransactionInfo'
 GenericTransaction:
   type: object
   title: Transaction object generic to all types
