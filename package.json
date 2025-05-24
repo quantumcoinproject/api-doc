@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereum/execution-apis.git"
+    "url": "git+https://github.com/quantumcoinproject/api-doc.git"
   },
   "author": "Ethereum",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/ethereum/execution-apis/issues"
+    "url": "https://github.com/quantumcoinproject/api-doc/issues"
   },
-  "homepage": "https://github.com/ethereum/execution-apis#readme",
+  "homepage": "https://github.com/quantumcoinproject/api-doc#readme",
   "devDependencies": {
     "@graphql-inspector/core": "~3.3.0",
     "@open-rpc/schema-utils-js": "1.15.0",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^3.0.0",
-    "@openapitools/openapi-generator-cli": "^2.20.2",
+    "@open-rpc/generator": "^2.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",

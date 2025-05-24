@@ -42,11 +42,7 @@ jobs:
           ls
           ls public/
           ls src/pages
-          ls src/
-
-      - name: Build client
-        run: |
-          open-rpc-generator generate -c open-rpc-generator-config-client.json           
+          ls src/    
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
