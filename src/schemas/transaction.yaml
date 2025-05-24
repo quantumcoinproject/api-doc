@@ -98,7 +98,6 @@ CommonTransactionInfo:
     - from
     - hash
     - transactionIndex
-  unevaluatedProperties: false
   properties:
     blockHash:
       title: block hash
@@ -119,8 +118,30 @@ TransactionInfo:
   type: object
   title: Transaction information
   allOf:
+    - title: Contextual information
+      required:
+        - blockHash
+        - blockNumber
+        - from
+        - hash
+        - transactionIndex
+      properties:
+        blockHash:
+          title: block hash
+          $ref: '#/components/schemas/hash32'
+        blockNumber:
+          title: block number
+          $ref: '#/components/schemas/uint'
+        from:
+          title: from address
+          $ref: '#/components/schemas/address'
+        hash:
+          title: transaction hash
+          $ref: '#/components/schemas/hash32'
+        transactionIndex:
+          title: transaction index
+          $ref: '#/components/schemas/uint'
     - $ref: '#/components/schemas/TransactionSigned'
-    - $ref: '#/components/schemas/CommonTransactionInfo'
 GenericTransaction:
   type: object
   title: Transaction object generic to all types

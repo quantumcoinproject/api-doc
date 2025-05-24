@@ -149,6 +149,13 @@
 												"items": {
 													"type": "object",
 													"title": "Transaction information",
+													"required": [
+														"blockHash",
+														"blockNumber",
+														"from",
+														"hash",
+														"transactionIndex"
+													],
 													"oneOf": [
 														{
 															"title": "Signed DefaultFeeTx",
@@ -255,14 +262,6 @@
 															}
 														}
 													],
-													"required": [
-														"blockHash",
-														"blockNumber",
-														"from",
-														"hash",
-														"transactionIndex"
-													],
-													"unevaluatedProperties": false,
 													"properties": {
 														"blockHash": {
 															"title": "block hash",
@@ -1395,6 +1394,13 @@
 											"items": {
 												"type": "object",
 												"title": "Transaction information",
+												"required": [
+													"blockHash",
+													"blockNumber",
+													"from",
+													"hash",
+													"transactionIndex"
+												],
 												"oneOf": [
 													{
 														"title": "Signed DefaultFeeTx",
@@ -1501,14 +1507,6 @@
 														}
 													}
 												],
-												"required": [
-													"blockHash",
-													"blockNumber",
-													"from",
-													"hash",
-													"transactionIndex"
-												],
-												"unevaluatedProperties": false,
 												"properties": {
 													"blockHash": {
 														"title": "block hash",
@@ -1751,6 +1749,13 @@
 											"items": {
 												"type": "object",
 												"title": "Transaction information",
+												"required": [
+													"blockHash",
+													"blockNumber",
+													"from",
+													"hash",
+													"transactionIndex"
+												],
 												"oneOf": [
 													{
 														"title": "Signed DefaultFeeTx",
@@ -1857,14 +1862,6 @@
 														}
 													}
 												],
-												"required": [
-													"blockHash",
-													"blockNumber",
-													"from",
-													"hash",
-													"transactionIndex"
-												],
-												"unevaluatedProperties": false,
 												"properties": {
 													"blockHash": {
 														"title": "block hash",
@@ -2902,6 +2899,13 @@
 						{
 							"type": "object",
 							"title": "Transaction information",
+							"required": [
+								"blockHash",
+								"blockNumber",
+								"from",
+								"hash",
+								"transactionIndex"
+							],
 							"oneOf": [
 								{
 									"title": "Signed DefaultFeeTx",
@@ -3008,14 +3012,6 @@
 									}
 								}
 							],
-							"required": [
-								"blockHash",
-								"blockNumber",
-								"from",
-								"hash",
-								"transactionIndex"
-							],
-							"unevaluatedProperties": false,
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
@@ -3131,6 +3127,13 @@
 						{
 							"type": "object",
 							"title": "Transaction information",
+							"required": [
+								"blockHash",
+								"blockNumber",
+								"from",
+								"hash",
+								"transactionIndex"
+							],
 							"oneOf": [
 								{
 									"title": "Signed DefaultFeeTx",
@@ -3237,14 +3240,6 @@
 									}
 								}
 							],
-							"required": [
-								"blockHash",
-								"blockNumber",
-								"from",
-								"hash",
-								"transactionIndex"
-							],
-							"unevaluatedProperties": false,
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
@@ -3337,6 +3332,13 @@
 						{
 							"type": "object",
 							"title": "Transaction information",
+							"required": [
+								"blockHash",
+								"blockNumber",
+								"from",
+								"hash",
+								"transactionIndex"
+							],
 							"oneOf": [
 								{
 									"title": "Signed DefaultFeeTx",
@@ -3443,14 +3445,6 @@
 									}
 								}
 							],
-							"required": [
-								"blockHash",
-								"blockNumber",
-								"from",
-								"hash",
-								"transactionIndex"
-							],
-							"unevaluatedProperties": false,
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
