@@ -90,30 +90,31 @@ TransactionSigned:
   oneOf:
     - $ref: '#/components/schemas/DefaultFeeTxSigned'
 CommonTransactionInfo:
-  - title: Contextual information
-    required:
-      - blockHash
-      - blockNumber
-      - from
-      - hash
-      - transactionIndex
-    unevaluatedProperties: false
-    properties:
-      blockHash:
-        title: block hash
-        $ref: '#/components/schemas/hash32'
-      blockNumber:
-        title: block number
-        $ref: '#/components/schemas/uint'
-      from:
-        title: from address
-        $ref: '#/components/schemas/address'
-      hash:
-        title: transaction hash
-        $ref: '#/components/schemas/hash32'
-      transactionIndex:
-        title: transaction index
-        $ref: '#/components/schemas/uint'
+  title: Contextual transaction information
+  type: object
+  required:
+    - blockHash
+    - blockNumber
+    - from
+    - hash
+    - transactionIndex
+  unevaluatedProperties: false
+  properties:
+    blockHash:
+      title: block hash
+      $ref: '#/components/schemas/hash32'
+    blockNumber:
+      title: block number
+      $ref: '#/components/schemas/uint'
+    from:
+      title: from address
+      $ref: '#/components/schemas/address'
+    hash:
+      title: transaction hash
+      $ref: '#/components/schemas/hash32'
+    transactionIndex:
+      title: transaction index
+      $ref: '#/components/schemas/uint'
 TransactionInfo:
   type: object
   title: Transaction information

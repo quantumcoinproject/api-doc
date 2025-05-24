@@ -266,23 +266,28 @@
 													"properties": {
 														"blockHash": {
 															"title": "block hash",
-															"$ref": "#/components/schemas/hash32"
+															"type": "string",
+															"pattern": "^0x[0-9a-f]{64}$"
 														},
 														"blockNumber": {
 															"title": "block number",
-															"$ref": "#/components/schemas/uint"
+															"type": "string",
+															"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 														},
 														"from": {
 															"title": "from address",
-															"$ref": "#/components/schemas/address"
+															"type": "string",
+															"pattern": "^0x[0-9a-fA-F]{64}$"
 														},
 														"hash": {
 															"title": "transaction hash",
-															"$ref": "#/components/schemas/hash32"
+															"type": "string",
+															"pattern": "^0x[0-9a-f]{64}$"
 														},
 														"transactionIndex": {
 															"title": "transaction index",
-															"$ref": "#/components/schemas/uint"
+															"type": "string",
+															"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 														}
 													}
 												}
@@ -1507,23 +1512,28 @@
 												"properties": {
 													"blockHash": {
 														"title": "block hash",
-														"$ref": "#/components/schemas/hash32"
+														"type": "string",
+														"pattern": "^0x[0-9a-f]{64}$"
 													},
 													"blockNumber": {
 														"title": "block number",
-														"$ref": "#/components/schemas/uint"
+														"type": "string",
+														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 													},
 													"from": {
 														"title": "from address",
-														"$ref": "#/components/schemas/address"
+														"type": "string",
+														"pattern": "^0x[0-9a-fA-F]{64}$"
 													},
 													"hash": {
 														"title": "transaction hash",
-														"$ref": "#/components/schemas/hash32"
+														"type": "string",
+														"pattern": "^0x[0-9a-f]{64}$"
 													},
 													"transactionIndex": {
 														"title": "transaction index",
-														"$ref": "#/components/schemas/uint"
+														"type": "string",
+														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 													}
 												}
 											}
@@ -1858,23 +1868,28 @@
 												"properties": {
 													"blockHash": {
 														"title": "block hash",
-														"$ref": "#/components/schemas/hash32"
+														"type": "string",
+														"pattern": "^0x[0-9a-f]{64}$"
 													},
 													"blockNumber": {
 														"title": "block number",
-														"$ref": "#/components/schemas/uint"
+														"type": "string",
+														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 													},
 													"from": {
 														"title": "from address",
-														"$ref": "#/components/schemas/address"
+														"type": "string",
+														"pattern": "^0x[0-9a-fA-F]{64}$"
 													},
 													"hash": {
 														"title": "transaction hash",
-														"$ref": "#/components/schemas/hash32"
+														"type": "string",
+														"pattern": "^0x[0-9a-f]{64}$"
 													},
 													"transactionIndex": {
 														"title": "transaction index",
-														"$ref": "#/components/schemas/uint"
+														"type": "string",
+														"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 													}
 												}
 											}
@@ -3004,23 +3019,28 @@
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
-									"$ref": "#/components/schemas/hash32"
+									"type": "string",
+									"pattern": "^0x[0-9a-f]{64}$"
 								},
 								"blockNumber": {
 									"title": "block number",
-									"$ref": "#/components/schemas/uint"
+									"type": "string",
+									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 								},
 								"from": {
 									"title": "from address",
-									"$ref": "#/components/schemas/address"
+									"type": "string",
+									"pattern": "^0x[0-9a-fA-F]{64}$"
 								},
 								"hash": {
 									"title": "transaction hash",
-									"$ref": "#/components/schemas/hash32"
+									"type": "string",
+									"pattern": "^0x[0-9a-f]{64}$"
 								},
 								"transactionIndex": {
 									"title": "transaction index",
-									"$ref": "#/components/schemas/uint"
+									"type": "string",
+									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 								}
 							}
 						}
@@ -3228,23 +3248,28 @@
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
-									"$ref": "#/components/schemas/hash32"
+									"type": "string",
+									"pattern": "^0x[0-9a-f]{64}$"
 								},
 								"blockNumber": {
 									"title": "block number",
-									"$ref": "#/components/schemas/uint"
+									"type": "string",
+									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 								},
 								"from": {
 									"title": "from address",
-									"$ref": "#/components/schemas/address"
+									"type": "string",
+									"pattern": "^0x[0-9a-fA-F]{64}$"
 								},
 								"hash": {
 									"title": "transaction hash",
-									"$ref": "#/components/schemas/hash32"
+									"type": "string",
+									"pattern": "^0x[0-9a-f]{64}$"
 								},
 								"transactionIndex": {
 									"title": "transaction index",
-									"$ref": "#/components/schemas/uint"
+									"type": "string",
+									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 								}
 							}
 						}
@@ -3429,23 +3454,28 @@
 							"properties": {
 								"blockHash": {
 									"title": "block hash",
-									"$ref": "#/components/schemas/hash32"
+									"type": "string",
+									"pattern": "^0x[0-9a-f]{64}$"
 								},
 								"blockNumber": {
 									"title": "block number",
-									"$ref": "#/components/schemas/uint"
+									"type": "string",
+									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 								},
 								"from": {
 									"title": "from address",
-									"$ref": "#/components/schemas/address"
+									"type": "string",
+									"pattern": "^0x[0-9a-fA-F]{64}$"
 								},
 								"hash": {
 									"title": "transaction hash",
-									"$ref": "#/components/schemas/hash32"
+									"type": "string",
+									"pattern": "^0x[0-9a-f]{64}$"
 								},
 								"transactionIndex": {
 									"title": "transaction index",
-									"$ref": "#/components/schemas/uint"
+									"type": "string",
+									"pattern": "^0x(0|[1-9a-f][0-9a-f]*)$"
 								}
 							}
 						}
