@@ -45,6 +45,7 @@
             gasPrice: '0x9184e72a000'
             to: '0x0000000000000000000000000000000000000000000000000000000000006000'
             value: '0x9184e72a'
+            nonce: '0x0'
       result:
         name: Encoded transaction
         value: '0xa3f20717a250c2b0b729b7e5becbff67fdaef7e0699da4de7ca5895b02a170a12d887fd3b17bfdce3481f10bea41f45ba9f709d39ce8325427b57afcfc994cee1b'
