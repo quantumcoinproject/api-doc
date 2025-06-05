@@ -27,28 +27,14 @@ To facilitate a more accurate measurement of execution layer client diversity st
 
 ### ClientCode
 
-This enum defines a standard for specifying a client with just two letters. Clients teams which have a code reserved in this list **MUST** use this code when identifying themselves. The code is specified here only to facilitate standardization and NOT to imply that these are the only supported Ethereum clients. Any clients not listed here are free to use any two letters which don't collide with an existing client code. They are encouraged to make a PR to this repo to reserve their own code. Existing codes are as follows:
-
- - `BU`: besu
- - `EJ`: ethereumJS
- - `EG`: erigon
- - `GE`: go-ethereum
- - `GR`: grandine
- - `LH`: lighthouse
- - `LS`: lodestar
- - `NM`: nethermind
- - `NB`: nimbus
- - `TE`: trin-execution
- - `TK`: teku
- - `PM`: prysm
- - `RH`: reth
+This enum defines a standard for specifying a client with just two letters. Clients teams which have a code reserved in this list **MUST** use this code when identifying themselves. The code is specified here only to facilitate standardization and NOT to imply that these are the only supported QuantumCoin clients. Any clients not listed here are free to use any two letters which don't collide with an existing client code. They are encouraged to make a PR to this repo to reserve their own code. Existing codes are as follows:
 
 ### ClientVersionV1
 
 This structure contains information which identifies a client implementation. The fields are encoded as follows:
 
 - `code`: `ClientCode`, e.g. `NB` or `BU`
-- `name`: `string`, Human-readable name of the client, e.g. `Lighthouse` or `go-ethereum`
+- `name`: `string`, Human-readable name of the client, e.g. `Lighthouse` or `quantum-coin-go`
 - `version`: `string`, the version string of the current implementation e.g. `v4.6.0` or `1.0.0-alpha.1` or `1.0.0+20130313144700`
 - `commit`: `DATA`, 4 bytes - first four bytes of the latest commit hash of this build e.g. `fa4ff922`
 

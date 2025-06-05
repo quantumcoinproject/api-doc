@@ -13,6 +13,7 @@ enum
 eth
 ethereum
 ethereumjs
+quantumcoin
 erigon
 getclientversionv
 getblobsv

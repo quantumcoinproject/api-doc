@@ -41,7 +41,7 @@ test contributors use the generation tool [`rpctestgen`][rpctestgen].
 Inside the `tests` directory are three chain-related files that test authors
 must be aware of.
 
-`genesis.json` - a standard genesis config file in the go-ethereum format.
+`genesis.json` - a standard genesis config file in the quantum-coin-go format.
 `chain.rlp`    - a newline-delimited list of blocks making up the test chain.
 `bad.rlp`      - a newline-delimited list of blocks that are sealed and
                  conduct an invalid transition. 

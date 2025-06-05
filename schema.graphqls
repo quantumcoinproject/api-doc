@@ -33,7 +33,7 @@ type Account {
 }
 
 """
-Address is a 20 byte Ethereum address, represented as 0x-prefixed hexadecimal.
+Address is a 32 byte QuantumCoin address, represented as 0x-prefixed hexadecimal.
 """
 scalar Address
 
