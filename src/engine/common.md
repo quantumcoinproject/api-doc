@@ -26,7 +26,7 @@ This document specifies common definitions and requirements affecting Engine API
 ## Underlying protocol
 
 Message format and encoding notation used by this specification are inherited
-from [Ethereum JSON-RPC Specification][json-rpc-spec].
+from [QuantumCoin JSON-RPC Specification][json-rpc-spec].
 
 Client software **MUST** expose Engine API at a port independent from JSON-RPC API.
 The default port for the Engine API is 8551.
@@ -44,7 +44,7 @@ the client **MUST** also expose the following subset of `eth` methods:
 * `eth_sendRawTransaction`
 * `eth_syncing`
 
-These methods are described in [Ethereum JSON-RPC Specification][json-rpc-spec].
+These methods are described in [QuantumCoin JSON-RPC Specification][json-rpc-spec].
 
 ### Authentication
 

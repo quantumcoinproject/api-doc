@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/quantumcoinproject/api-doc.git"
   },
-  "author": "Ethereum",
+  "author": "QuantumCoin",
   "license": "CC0-1.0",
   "bugs": {
     "url": "https://github.com/quantumcoinproject/api-doc/issues"
