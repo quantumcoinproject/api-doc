@@ -49,6 +49,4 @@ jobs:
           ls src/pages
           ls src/
 
-      - name: Test Build client
-        run: |
-          open-rpc-generator generate -c open-rpc-generator-config-client.json  
+

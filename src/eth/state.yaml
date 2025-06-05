@@ -17,7 +17,7 @@
     - name: eth_getBalance example
       params:
         - name: Address
-          value: '0xfe3b557e8fb62b89f4916b721be55ceb828dbd73'
+          value: '0x0000000000000000000000000000000000000000000000000000000000009000'
         - name: Block
           value: 'latest'
       result:
@@ -48,7 +48,7 @@
     - name: eth_getStorageAt example
       params:
         - name: Address
-          value: '0xfe3b557e8fb62b89f4916b721be55ceb828dbd73'
+          value: '0x0000000000000000000000000000000000000000000000000000000000009000'
         - name: Storage slot
           value: '0x0'
         - name: Block
@@ -100,7 +100,7 @@
     - name: eth_getCode example
       params:
         - name: Address
-          value: '0xa50a51c09a5c451c52bb714527e1974b686d8e77'
+          value: '0x0000000000000000000000000000000000000000000000000000000000009000'
         - name: Block
           value: 'latest'
       result:
@@ -132,7 +132,7 @@
     - name: eth_getProof example
       params:
         - name: Address
-          value: '0xe5cB067E90D5Cd1F8052B83562Ae670bA4A211a8'
+          value: '0x0000000000000000000000000000000000000000000000000000000000009000'
         - name: StorageKeys
           value:
             - '0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421'
