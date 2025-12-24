@@ -47,7 +47,7 @@ const doc = {
   openrpc: "1.2.4",
   info: {
     title: "QuantumCoin JSON-RPC Specification",
-    description: "A specification of the standard interface for QuantumCoin clients.",
+    description: "A specification of the standard interface for QuantumCoin clients. For examples, see: [cURL Examples](/examples.html)",
     license: {
       name: "CC0-1.0",
       url: "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
