@@ -28,6 +28,7 @@ jobs:
           npm install -g @open-rpc/generator
           open-rpc-generator generate -c open-rpc-generator-config-doc.json    
           cp img/*.* build/docs/gatsby/src/images/
+          cp html/*.* build/docs/gatsby/src/
           ls build/docs/gatsby
           cd build/docs/gatsby
           pwd
